@@ -32,7 +32,7 @@ export class AddNoteDialogComponent {
       marked: false
     }
 
-    this.noteService.addNote(note)
+    this.noteService.addNote(note, "notes")
     this.closeDialog();
   }
 }

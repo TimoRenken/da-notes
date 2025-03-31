@@ -126,15 +126,21 @@
                 </svg>
                 }
 
-
-
                 <p>Trash</p>
             </button>
         </div>
     </div>
-    <div>
+
+    <div *ngIf="status === 'notes' ">
         @for (note of getList(); track note) {
         <app-note [note]="note"></app-note>
         }
     </div>
+    
+    <div *ngIf="status === 'trash' ">
+        @for (note of getTrashList(); track note) {
+        <app-note [note]="note"></app-note>
+        }
+    </div>
+
 </div>
