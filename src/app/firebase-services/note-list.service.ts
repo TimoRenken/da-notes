@@ -80,6 +80,7 @@ export class NoteListService {
   ngOnDestroy() {
     this.unsubNotes();
     this.unsubTrash();
+    this.unsubMarkedNotes();
   }
 
 
